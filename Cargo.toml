@@ -3,3 +3,6 @@ name = "bioinformatics"
 version = "0.1.0"
 authors = ["Simon Naumov <daretoodefy@gmail.com>"]
 edition = "2021"
+
+[dependencies]
+maplit = "1.0.2"

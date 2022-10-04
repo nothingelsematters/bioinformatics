@@ -132,6 +132,7 @@ enum Action {
     Match,
 }
 
+#[derive(Debug, PartialEq, Eq)]
 pub struct Output {
     score: isize,
     left: String,
@@ -555,5 +556,22 @@ impl Default for Parameters {
             gap_opening_penalty: -11,
             gap_opening_extension: -1,
         }
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn sample_test() {
+        let actual = affine_gap_align("PRTEINS", "PRTWPSEIN", &Parameters::default());
+        let expected = Output {
+            score: 8,
+            left: "PRT---EINS".to_owned(),
+            right: "PRTWPSEIN-".to_owned(),
+        };
+
+        assert_eq!(actual, expected)
     }
 }

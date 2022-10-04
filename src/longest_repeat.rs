@@ -85,3 +85,15 @@ impl SuffixTree {
         Some(substring)
     }
 }
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn sample_test() {
+        let actual = longest_repeat("ATATCGTTTTATCGTT");
+        let expected = "TATCGTT".to_owned();
+        assert_eq!(actual, expected)
+    }
+}

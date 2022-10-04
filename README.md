@@ -11,3 +11,6 @@ Bioinformatics ITMO University course with [Rosalind](https://rosalind.info/) ta
 - Reconstruct a String from its Paired Composition
   [[Rosalind](https://rosalind.info/problems/ba3j/)]
   [[Source](src/paired_composition_reconstruction.rs)]
+- Find a Median String
+  [[Rosalind](https://rosalind.info/problems/ba2b/)]
+  [[Source](src/median_string.rs)]

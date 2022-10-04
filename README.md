@@ -8,3 +8,6 @@ Bioinformatics ITMO University course with [Rosalind](https://rosalind.info/) ta
 - Align Two Strings Using Affine Gap Penalties:
   [[Rosalind](https://rosalind.info/problems/ba5j/)]
   [[Source](src/affine_gap_align.rs)]
+- Reconstruct a String from its Paired Composition
+  [[Rosalind](https://rosalind.info/problems/ba3j/)]
+  [[Source](src/paired_composition_reconstruction.rs)]

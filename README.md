@@ -14,3 +14,6 @@ Bioinformatics ITMO University course with [Rosalind](https://rosalind.info/) ta
 - Find a Median String
   [[Rosalind](https://rosalind.info/problems/ba2b/)]
   [[Source](src/median_string.rs)]
+- Implement the Viterbi Algorithm
+  [[Rosalind](https://rosalind.info/problems/ba10c/)]
+  [[Source](src/viterbi.rs)]

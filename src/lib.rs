@@ -1,6 +1,11 @@
+pub mod additive_phylogeny;
 pub mod affine_gap_align;
+pub mod approximate_occurancies;
 pub mod longest_repeat;
 pub mod median_string;
 pub mod paired_composition_reconstruction;
+pub mod pattern_matching;
+pub mod randomized_motif_search;
+pub mod two_breaks_transform;
 pub(crate) mod utils;
 pub mod viterbi;

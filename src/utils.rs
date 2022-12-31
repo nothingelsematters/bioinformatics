@@ -1,4 +1,4 @@
-use std::{fmt::Debug, io::stdin, str::FromStr};
+use std::{fmt::Debug, io::stdin, ops::Deref, str::FromStr};
 
 pub fn read_line() -> String {
     let mut buffer = String::new();
@@ -19,4 +19,24 @@ pub fn read_lines() -> Vec<String> {
         .lines()
         .collect::<Result<Vec<_>, _>>()
         .expect("stdio reading")
+}
+
+#[derive(Debug, Clone, PartialEq, PartialOrd)]
+pub struct OrdF64(pub f64);
+
+impl Eq for OrdF64 {}
+
+#[allow(clippy::derive_ord_xor_partial_ord)]
+impl Ord for OrdF64 {
+    fn cmp(&self, other: &Self) -> std::cmp::Ordering {
+        self.partial_cmp(other).unwrap()
+    }
+}
+
+impl Deref for OrdF64 {
+    type Target = f64;
+
+    fn deref(&self) -> &Self::Target {
+        &self.0
+    }
 }
